@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Notes App</title>
+    <script defer src="bundle.js"></script>
+  </head>
+  <body>
+    <header>
+      <app-bar></app-bar>
+    </header>
+
+    <main>
+      <div class="container">
+        <button id="btn-add-note" class="btn-add-note">Add Note</button>
+        <add-note-form hidden></add-note-form>
+        <button id="btn-toggle-archive" class="btn-toggle-archive">
+          Archive Note
+        </button>
+
+        <div id="searchBarContainer" class="search-bar-container">
+          <search-bar></search-bar>
+        </div>
+        <section-with-title
+          id="notes"
+          class="notes"
+          title="Notes List"
+          highlight
+        >
+          <div id="notesListContainer" class="notes-list-container">
+            <query-waiting></query-waiting>
+            <!-- <search-loading hidden></search-loading> -->
+            <loading-spinner id="loadingIndicator" hidden></loading-spinner>
+            <!-- <note-search-error></note-search-error> -->
+
+            <notes-list></notes-list>
+            <archived-notes hidden></archived-notes>
+          </div>
+        </section-with-title>
+      </div>
+    </main>
+
+    <footer>
+      <footer-bar></footer-bar>
+    </footer>
+  </body>
+</html>
